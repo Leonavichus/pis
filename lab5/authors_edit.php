@@ -18,43 +18,46 @@ if (isset($_POST['id'])) {
     }
 }
 ?>
-
-<div class="card-header">
-    <h2>Update author(Задание№2)</h2>
-</div>
-<div class="card-body">
-    <form method="post">
-        <div class="form-group">
-            <label for="id">Id</label>
-            <input type="text" name="id" id="id" class="form-control">
+<div class="container">
+    <div class="card mt-5">
+        <div class="card-header">
+            <h2>Update author(Задание№2)</h2>
         </div>
-        <div class="form-group">
-            <button type="submit" class="btn btn-info">Select</button>
+        <div class="card-body">
+            <form method="post">
+                <div class="form-group">
+                    <label for="id">Id</label>
+                    <input type="text" name="id" id="id" class="form-control">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-info">Select</button>
+                </div>
+            </form>
+            <form method="post">
+                <div class="form-group">
+                    <label for="surname">Surname</label>
+                    <input value="<?= $authors->surname; ?>" type="text" name="surname" id="surname" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input value="<?= $authors->name; ?>" type="text" name="name" id="name" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="middlename">Middle_Name</label>
+                    <input value="<?= $authors->middlename; ?>" type="text" name="middlename" id="middlename" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="birthday">Birthday</label>
+                    <input value="<?= $authors->birthday; ?>" type="text" name="birthday" id="birthday" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date_Death</label>
+                    <input value="<?= $authors->dob; ?>" type="text" name="dob" id="dob" class="form-control">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-info">Update author</button>
+                </div>
+            </form>
         </div>
-    </form>
-    <form method="post">
-        <div class="form-group">
-            <label for="surname">Surname</label>
-            <input value="<?= $authors->surname; ?>" type="text" name="surname" id="surname" class="form-control">
-        </div>
-        <div class="form-group">
-            <label for="name">Name</label>
-            <input value="<?= $authors->name; ?>" type="text" name="name" id="name" class="form-control">
-        </div>
-        <div class="form-group">
-            <label for="middlename">Middle_Name</label>
-            <input value="<?= $authors->middlename; ?>" type="text" name="middlename" id="middlename" class="form-control">
-        </div>
-        <div class="form-group">
-            <label for="birthday">Birthday</label>
-            <input value="<?= $authors->birthday; ?>" type="text" name="birthday" id="birthday" class="form-control">
-        </div>
-        <div class="form-group">
-            <label for="dob">Date_Death</label>
-            <input value="<?= $authors->dob; ?>" type="text" name="dob" id="dob" class="form-control">
-        </div>
-        <div class="form-group">
-            <button type="submit" class="btn btn-info">Update author</button>
-        </div>
-    </form>
+    </div>
 </div>
