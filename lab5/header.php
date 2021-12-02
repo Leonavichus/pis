@@ -32,6 +32,12 @@
         <li class="nav-item active">
           <a class="nav-link" href="genre_book.php">Genre_Book<span class="sr-only">(current)</span></a>
         </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="books_search.php">Books_Search<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="books_search_2.php">Books_Search_2<span class="sr-only">(current)</span></a>
+        </li>
       </ul>
     </div>
   </nav>
