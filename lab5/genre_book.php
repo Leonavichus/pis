@@ -17,7 +17,7 @@ $genre = R::findAll('genre');
                 <?php foreach ($genre as $genre) : ?>
                     <tr>
                         <td><?= $genre->name; ?></td>
-                        <!-- <td><?= $genre->id; ?></td> -->
+                        <td><?= $countBook = R::count('books', 'idg = ?', [$genre->id]) ?></td>
                     </tr>
                 <?php endforeach; ?>
             </table>

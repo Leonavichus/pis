@@ -29,6 +29,9 @@
         <li class="nav-item active">
           <a class="nav-link" href="genre_delete.php">Delete<span class="sr-only">(current)</span></a>
         </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="genre_book.php">Genre_Book<span class="sr-only">(current)</span></a>
+        </li>
       </ul>
     </div>
   </nav>
