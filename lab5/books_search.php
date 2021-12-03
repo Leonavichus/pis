@@ -4,10 +4,10 @@ require 'db.php';
 require 'header.php';
 require 'footer.php';
 
-$search_1 = $_POST['kyeword'];
+$search = $_POST['kyeword'];
 $books = R::findLike(
     'books',
-    ['title' => [$search_1]],
+    ['title' => [$search]],
     'ORDER BY title ASC'
 );
 ?>
