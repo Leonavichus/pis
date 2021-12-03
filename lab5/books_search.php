@@ -3,19 +3,40 @@
 require 'db.php';
 require 'header.php';
 require 'footer.php';
+
+$search_1 = $_POST['kyeword'];
+$books = R::findLike(
+    'books',
+    ['title' => [$search_1]],
+    'ORDER BY title ASC'
+);
 ?>
 <div class="container">
+    <form action="" method="POST">
+        <div class="form-inline">
+            <input type="text" name="kyeword" class="form-control" placeholder="Search">
+            <button class="btn btn-success" name="search">Search</button>
+        </div>
+    </form>
     <div class="card mt-5">
         <div class="card-body">
             <table class="table table-bordered">
                 <tr>
-                    <th>Genre</th>
-                    <th>Count_Book</th>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Year_Writing</th>
+                    <th>Id_authors</th>
+                    <th>Id_genre</th>
                 </tr>
-                <?php foreach ($genre as $genre) : ?>
+                <?php foreach ($books as $books) : ?>
                     <tr>
-                        <td><?= $genre->name; ?></td>
-                        <td><?= $countBook = R::count('books', 'idg = ?', [$genre->id]) ?></td>
+                        <td><?= $books->id; ?></td>
+                        <td><?= $books->title; ?></td>
+                        <td><?= $books->description; ?></td>
+                        <td><?= $books->yearwriting; ?></td>
+                        <td><?= $books->ida; ?></td>
+                        <td><?= $books->idg; ?></td>
                     </tr>
                 <?php endforeach; ?>
             </table>
