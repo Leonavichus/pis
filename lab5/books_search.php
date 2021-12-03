@@ -5,11 +5,7 @@ require 'header.php';
 require 'footer.php';
 
 $search = $_POST['kyeword'];
-$books = R::findLike(
-    'books',
-    ['title' => [$search]],
-    'ORDER BY title ASC'
-);
+$books = R::findAll('books', 'title LIKE ?', ["%$search%"]);
 ?>
 <div class="container">
     <form action="" method="POST">
