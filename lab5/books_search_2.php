@@ -4,7 +4,7 @@ require 'db.php';
 require 'header.php';
 require 'footer.php';
 
-$books = R::findAll('books');
+$books = R::findAll('books', 'WHERE yearwriting BETWEEN EXTRACT(YEAR FROM CURRENT_DATE)-10 and EXTRACT(YEAR FROM CURRENT_DATE)');
 ?>
 <div class="container">
     <div class="card mt-5">
