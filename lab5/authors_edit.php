@@ -8,7 +8,7 @@ if (isset($_POST['id'])) {
     $id = $_POST['id'];
     $authors = R::load('authors', $id);
     if (isset($_POST['surname']) && isset($_POST['name']) && isset($_POST['middlename']) && isset($_POST['birthday']) && isset($_POST['dob'])) {
-        $authors = R::load('authors', $id);
+        $authors = R::dispense('authors');
         $authors->surname = $_POST['surname'];
         $authors->name = $_POST['name'];
         $authors->middlename = $_POST['middlename'];
